@@ -4,7 +4,6 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using DisqusNET.Model.Users;
 using DisqusNET.Request.Users.Model;
-using Newtonsoft.Json;
 
 namespace DisqusNET.Request.Users
 {
@@ -17,7 +16,7 @@ namespace DisqusNET.Request.Users
                 var data = new ListPostsRequestData
                                {
                                    AccessToken = DisqusOptions.GetInstance().AccessToken,
-                                   Limit = 1
+                                   Limit = 2
                                };
 
                 var request = BuildRequest("https://disqus.com/api/3.0/users/listActivity.json", HttpMethod.GET, data);
@@ -25,10 +24,8 @@ namespace DisqusNET.Request.Users
 
                 using (var stream = new StreamReader(response.GetResponseStream()))
                 {
-//                    var serializer = new JsonSerializer();
-//                    var result = (ListPostsModel) serializer.Deserialize(stream, typeof(ListPostsModel));
                     var serializer = new DataContractJsonSerializer(typeof(ListPostsModel));
-                    var result =  serializer.ReadObject(stream.BaseStream) as ListPostsModel;
+                    var result = serializer.ReadObject(stream.BaseStream) as ListPostsModel;
 
                     return ExecutionResult<ListPostsModel>.Create(result);
                 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace DisqusNET.Model.Users
@@ -6,6 +7,9 @@ namespace DisqusNET.Model.Users
     [DataContract]
     public class ListPostsModel
     {
+        [DataMember(Name = "cursor")]
+        public Cursor Cursor { get; set; }
+
         [DataMember(Name = "code")]
         public int Code { get; set; }
 
@@ -16,10 +20,14 @@ namespace DisqusNET.Model.Users
     [DataContract]
     public class Response
     {
-        [DataMember(Name = "forum")]
-        public string Forum { get; set; }
+        [DataMember(Name = "type")]
+        public string Type { get; set; }
+    }
 
-        [DataMember(Name = "isJuliaFlagged")]
-        public bool IsJuliaFlagged { get; set; }
+    [DataContract]
+    public class Cursor
+    {
+        [DataMember(Name = "id")]
+        public string Id { get; set; }
     }
 }
