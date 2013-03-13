@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// Управление общими сведениями о сборке осуществляется с помощью 
+// набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
+// связанные со сборкой.
+=======
+﻿using System.Resources;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// Общие сведения о сборке определяются следующим 
+// набором атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
+// связанные с этой сборкой.
+>>>>>>> e77610848409284bec7f99d88dec48d56a79e5b5
+[assembly: AssemblyTitle("DisqusNET")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("DisqusNET")]
+<<<<<<< HEAD
+[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
+// для COM-компонентов.  Если требуется обратиться к типу в этой сборке через 
+// COM, задайте атрибуту ComVisible значение TRUE для этого типа.
+[assembly: ComVisible(false)]
+
+// Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
+[assembly: Guid("b2293152-b30f-48f0-a312-456dc54fd5ee")]
+=======
+[assembly: AssemblyCopyright("©  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: NeutralResourcesLanguage("ru")]
+>>>>>>> e77610848409284bec7f99d88dec48d56a79e5b5
+
+// Сведения о версии сборки состоят из следующих четырех значений:
+//
+//      Основной номер версии
+//      Дополнительный номер версии 
+//      Номер построения
+//      Редакция
+//
+<<<<<<< HEAD
+// Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
+// используя "*", как показано ниже:
+=======
+// Можно задать все значения или использовать значения номера построения и редакции по умолчанию, 
+// указав "*", как показано ниже:
+>>>>>>> e77610848409284bec7f99d88dec48d56a79e5b5
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
