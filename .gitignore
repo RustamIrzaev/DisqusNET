@@ -32,4 +32,4 @@ _ReSharper.*/
 */obj/
 obj/
 *.suo
-TestLibrary/
+TestLibrary/Program.cs
