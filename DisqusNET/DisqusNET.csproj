@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisqusOptions.cs" />
+    <Compile Include="Model\Users\ListPostsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\BaseRequest.cs" />
     <Compile Include="Request\ExecutionResult.cs" />
+    <Compile Include="Request\Users\ListActivityRequest.cs" />
+    <Compile Include="Request\Users\ListPostsRequest.cs" />
+    <Compile Include="Request\Users\Model\ListPostsRequestData.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Users\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

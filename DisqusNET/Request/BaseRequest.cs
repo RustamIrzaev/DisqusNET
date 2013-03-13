@@ -19,6 +19,7 @@ namespace DisqusNET.Request
         {
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = httpMethod.ToString();
+            request.ContentType = "application/json";
 
             if (content != null)
             {
