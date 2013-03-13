@@ -12,21 +12,16 @@ namespace DisqusNET.Request
 
         public static HttpWebRequest BuildRequest(string url, HttpMethod method)
         {
-            return BuildRequest(url, method, null);
+            return BuildRequest<object>(url, method);
         }
 
-        public static HttpWebRequest BuildRequest(string url, HttpMethod httpMethod, MemoryStream content)
+        public static HttpWebRequest BuildRequest<T>(string url, HttpMethod httpMethod, T data = default(T))
         {
+            url += "?" + data.ToQueryString();
+
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = httpMethod.ToString();
             request.ContentType = "application/json";
-
-            if (content != null)
-            {
-                request.ContentLength = content.Length;
-                var requestStream = request.GetRequestStream();
-                requestStream.Write(content.ToArray(), 0, (int)content.Length);
-            }
 
             return request;
         }

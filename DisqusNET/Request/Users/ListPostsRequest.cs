@@ -20,8 +20,7 @@ namespace DisqusNET.Request.Users
                                    Limit = 1
                                };
 
-                var memoryStream = SerializeContentJson(data);
-                var request = BuildRequest("https://disqus.com/api/3.0/users/listActivity.json", HttpMethod.GET, memoryStream);
+                var request = BuildRequest("https://disqus.com/api/3.0/users/listActivity.json", HttpMethod.GET, data);
                 var response = (HttpWebResponse)request.GetResponse();
 
                 using (var stream = new StreamReader(response.GetResponseStream()))
