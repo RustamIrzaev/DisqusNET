@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -29,7 +30,7 @@ namespace DisqusNET.Request
             return request;
         }
 
-        public static MemoryStream SerializeContent<T>(T container) where T : class
+        public static MemoryStream SerializeContentXml<T>(T container) where T : class
         {
             var memoryStream = new MemoryStream();
             var xmlTextWriter = new XmlTextWriter(memoryStream, null);
@@ -39,6 +40,18 @@ namespace DisqusNET.Request
 
             var serializer = new XmlSerializer(typeof(T));
             serializer.Serialize(xmlTextWriter, container, namespaces);
+
+            memoryStream.Seek(0, SeekOrigin.Begin);
+
+            return memoryStream;
+        }
+
+        public static MemoryStream SerializeContentJson<T>(T container) where T : class
+        {
+            var memoryStream = new MemoryStream();
+
+            var serializer = new DataContractJsonSerializer(typeof(T));
+            serializer.WriteObject(memoryStream, container);
 
             memoryStream.Seek(0, SeekOrigin.Begin);
 
