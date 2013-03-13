@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using DisqusNET.Model.Users;
 using DisqusNET.Request.Users.Model;
 
@@ -10,7 +9,7 @@ namespace DisqusNET.Request.Users
 {
     public class ListPostsRequest : BaseRequest
     {
-        public static ExecutionResult<List<ListPostsModel>> Execute()
+        public static ExecutionResult<ListPostsModel> Execute()
         {
             try
             {
@@ -25,15 +24,15 @@ namespace DisqusNET.Request.Users
 
                 using (var stream = new StreamReader(response.GetResponseStream()))
                 {
-                    var serializer = new DataContractSerializer(typeof(List<ListPostsModel>));
-                    var result = (List<ListPostsModel>) serializer.ReadObject(stream.BaseStream);
+                    var serializer = new DataContractJsonSerializer(typeof(ListPostsModel));
+                    var result = (ListPostsModel) serializer.ReadObject(stream.BaseStream);
 
-                    return ExecutionResult<List<ListPostsModel>>.Create(result);
+                    return ExecutionResult<ListPostsModel>.Create(result);
                 }
             }
             catch (Exception e)
             {
-                return ExecutionResult<List<ListPostsModel>>.CreateError(e);
+                return ExecutionResult<ListPostsModel>.CreateError(e);
             }
         }
     }

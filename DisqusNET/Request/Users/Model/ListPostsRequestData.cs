@@ -3,7 +3,7 @@
 namespace DisqusNET.Request.Users.Model
 {
     [DataContract]
-    public class ListPostsRequestData
+    public class ListPostsRequestData : ApiKeyRequestExtension
     {
         [DataMember(Name = "access_token")]
         public string AccessToken { get; set; }

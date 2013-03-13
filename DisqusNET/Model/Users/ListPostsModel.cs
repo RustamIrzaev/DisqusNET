@@ -2,7 +2,7 @@
 
 namespace DisqusNET.Model.Users
 {
-    [DataContract]
+    [DataContract(Namespace = "")]
     public class ListPostsModel
     {
         [DataMember(Name = "code")]
