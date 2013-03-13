@@ -4,6 +4,7 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using DisqusNET.Model.Users;
 using DisqusNET.Request.Users.Model;
+using Newtonsoft.Json;
 
 namespace DisqusNET.Request.Users
 {
@@ -24,8 +25,10 @@ namespace DisqusNET.Request.Users
 
                 using (var stream = new StreamReader(response.GetResponseStream()))
                 {
+//                    var serializer = new JsonSerializer();
+//                    var result = (ListPostsModel) serializer.Deserialize(stream, typeof(ListPostsModel));
                     var serializer = new DataContractJsonSerializer(typeof(ListPostsModel));
-                    var result = (ListPostsModel) serializer.ReadObject(stream.BaseStream);
+                    var result =  serializer.ReadObject(stream.BaseStream) as ListPostsModel;
 
                     return ExecutionResult<ListPostsModel>.Create(result);
                 }
@@ -37,3 +40,12 @@ namespace DisqusNET.Request.Users
         }
     }
 }
+
+//public static T Deserialise<T>(string json) {
+//  var obj = Activator.CreateInstance<T>();
+//  using (var memoryStream = new MemoryStream(Encoding.Unicode.GetBytes(json))) {
+//    var serializer = new DataContractJsonSerializer(obj.GetType());
+//    obj = (T) serializer.ReadObject(memoryStream);
+//    return obj;
+//  }
+//}
