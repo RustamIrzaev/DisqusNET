@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
+using DisqusNET.Model.Users;
 
 namespace DisqusNET.Model.Posts
 {
@@ -13,6 +14,6 @@ namespace DisqusNET.Model.Posts
         public int Code { get; set; }
 
         [DataMember(Name = "response")]
-        public IEnumerable<ResponseModel> Response { get; set; }
+        public IEnumerable<UserResponseModel> Response { get; set; }
     }
 }

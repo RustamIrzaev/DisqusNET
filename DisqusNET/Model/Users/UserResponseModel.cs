@@ -1,9 +1,9 @@
-﻿using System.Runtime.Serialization;
+using System.Runtime.Serialization;
 
-namespace DisqusNET.Model
+namespace DisqusNET.Model.Users
 {
     [DataContract]
-    public class ResponseModel
+    public class UserResponseModel
     {
         [DataMember(Name = "isJuliaFlagged")]
         public bool IsJuliaFlagged { get; set; }

@@ -1,6 +1,6 @@
-﻿using System.Runtime.Serialization;
+using System.Runtime.Serialization;
 
-namespace DisqusNET.Model
+namespace DisqusNET.Model.Users
 {
     [DataContract]
     public class AuthorModel

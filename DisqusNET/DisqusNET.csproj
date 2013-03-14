@@ -42,18 +42,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisqusOptions.cs" />
-    <Compile Include="Model\AuthorModel.cs" />
-    <Compile Include="Model\AvatarModel.cs" />
     <Compile Include="Model\CursorModel.cs" />
     <Compile Include="Model\Posts\ListsModel.cs" />
-    <Compile Include="Model\ResponseModel.cs" />
+    <Compile Include="Model\Threads\ThreadResponse.cs" />
+    <Compile Include="Model\Threads\ThreadsDetails.cs" />
+    <Compile Include="Model\Users\AuthorModel.cs" />
+    <Compile Include="Model\Users\AvatarModel.cs" />
     <Compile Include="Model\Users\ListPostsModel.cs" />
+    <Compile Include="Model\Users\UserResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\ApiKeyRequestExtension.cs" />
     <Compile Include="Request\BaseRequest.cs" />
     <Compile Include="Request\ExecutionResult.cs" />
     <Compile Include="Request\Posts\ListRequest.cs" />
     <Compile Include="Request\Posts\Model\ListRequestData.cs" />
+    <Compile Include="Request\Threads\Model\ThreadsDetailsRequestData.cs" />
+    <Compile Include="Request\Threads\ThreadsDetailsRequest.cs" />
     <Compile Include="Request\Users\ListActivityRequest.cs" />
     <Compile Include="Request\Users\ListPostsRequest.cs" />
     <Compile Include="Request\Users\Model\ListPostsRequestData.cs" />
