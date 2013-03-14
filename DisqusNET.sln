@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisqusNET", "DisqusNET\DisqusNET.csproj", "{ED0A7EEE-95D6-4CC5-BECD-21C3970CE78C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrary", "TestLibrary\TestLibrary.csproj", "{5746DD83-024B-49F0-A805-AD68A1441B43}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{ED0A7EEE-95D6-4CC5-BECD-21C3970CE78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED0A7EEE-95D6-4CC5-BECD-21C3970CE78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED0A7EEE-95D6-4CC5-BECD-21C3970CE78C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5746DD83-024B-49F0-A805-AD68A1441B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5746DD83-024B-49F0-A805-AD68A1441B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5746DD83-024B-49F0-A805-AD68A1441B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5746DD83-024B-49F0-A805-AD68A1441B43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
