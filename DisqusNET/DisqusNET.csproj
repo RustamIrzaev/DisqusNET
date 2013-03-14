@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisqusOptions.cs" />
+    <Compile Include="Model\CursorModel.cs" />
     <Compile Include="Model\Posts\ListsModel.cs" />
+    <Compile Include="Model\ResponseModel.cs" />
     <Compile Include="Model\Users\ListPostsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\ApiKeyRequestExtension.cs" />
