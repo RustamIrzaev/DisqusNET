@@ -15,8 +15,7 @@ namespace DisqusNET.Request.Users
             {
                 var data = new ListPostsRequestData
                                {
-                                   AccessToken = DisqusOptions.GetInstance().AccessToken,
-                                   Limit = 2
+                                   AccessToken = DisqusOptions.GetInstance().AccessToken
                                };
 
                 var request = BuildRequest("https://disqus.com/api/3.0/users/listActivity.json", HttpMethod.GET, data);

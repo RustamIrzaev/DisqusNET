@@ -10,5 +10,10 @@ namespace DisqusNET.Request.Users.Model
 
         [DataMember(Name = "limit")]
         public int Limit { get; set; }
+
+        public ListPostsRequestData()
+        {
+            Limit = 25;
+        }
     }
 }
