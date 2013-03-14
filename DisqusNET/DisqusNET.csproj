@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisqusOptions.cs" />
+    <Compile Include="Model\AuthorModel.cs" />
+    <Compile Include="Model\AvatarModel.cs" />
     <Compile Include="Model\CursorModel.cs" />
     <Compile Include="Model\Posts\ListsModel.cs" />
     <Compile Include="Model\ResponseModel.cs" />
