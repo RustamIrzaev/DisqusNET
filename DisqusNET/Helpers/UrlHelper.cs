@@ -21,7 +21,14 @@ namespace DisqusNET.Helpers
                     var attributes = property.GetCustomAttributes(typeof(DataMemberAttribute), false);
                     if (attributes.Any())
                     {
-                        properties.Add((attributes[0] as DataMemberAttribute).Name, property.GetValue(@object, null).ToString());
+                        foreach (var attribute in attributes)
+                        {
+                            if (attribute is DataMemberAttribute)
+                            {
+                                properties.Add((attributes[0] as DataMemberAttribute).Name, property.GetValue(@object, null).ToString());
+                                break;
+                            }
+                        }
                     }
                     else
                     {
