@@ -3,6 +3,7 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Xml;
 using System.Xml.Serialization;
+using DisqusNET.Helpers;
 
 namespace DisqusNET.Request
 {

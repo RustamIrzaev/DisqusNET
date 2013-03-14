@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisqusOptions.cs" />
+    <Compile Include="Helpers\ClassConverterHelper.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Model\CursorModel.cs" />
     <Compile Include="Model\Posts\ListsModel.cs" />
     <Compile Include="Model\Threads\ThreadResponse.cs" />
@@ -61,7 +63,6 @@
     <Compile Include="Request\Users\ListActivityRequest.cs" />
     <Compile Include="Request\Users\ListPostsRequest.cs" />
     <Compile Include="Request\Users\Model\ListPostsRequestData.cs" />
-    <Compile Include="UrlHelper.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
