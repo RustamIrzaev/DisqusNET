@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace DisqusNET.Model.Threads
 {
@@ -55,6 +56,9 @@ namespace DisqusNET.Model.Threads
         [DataMember(Name = "slug")]
         public string Slug { get; set; }
 
-        // createdAt
+        [DataMember(Name = "createdAt")]
+        public string CreatedAtString { get; set; }
+
+        public DateTime CreatedAt { get { return DateTime.ParseExact(CreatedAtString, "yyyy-MM-ddTHH:mm:ss", null); } }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.Serialization;
 
 namespace DisqusNET.Model.Users
@@ -34,7 +35,10 @@ namespace DisqusNET.Model.Users
         [DataMember(Name = "raw_message")]
         public string RawMessage { get; set; }
 
-        // createdAt
+        [DataMember(Name = "createdAt")]
+        public string CreatedAtString { get; set; }
+
+        public DateTime CreatedAt { get { return DateTime.ParseExact(CreatedAtString, "yyyy-MM-ddTHH:mm:ss", null); } }
 
         [DataMember(Name = "id")]
         public string Id { get; set; }
