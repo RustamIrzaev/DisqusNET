@@ -9,14 +9,16 @@ namespace DisqusNET.Request.Posts
 {
     public class ListRequest : BaseRequest
     {
-        public static ExecutionResult<ListsModel> Execute()
+        public static ExecutionResult<ListsModel> Execute(ListRequestData data = null)
         {
             try
             {
-                var data = new ListRequestData
-                    {
-                        AccessToken = DisqusOptions.GetInstance().AccessToken
-                    };
+                if (data == null)
+                {
+                    data = new ListRequestData();
+                }
+
+                data.AccessToken = DisqusOptions.GetInstance().AccessToken;
 
                 var request = BuildRequest("https://disqus.com/api/3.0/posts/list.json", HttpMethod.GET, data);
                 var response = (HttpWebResponse)request.GetResponse();
